@@ -25,16 +25,27 @@
 	margin-bottom 40px
 	
 .title
-	font-family $Bold
+	color $dark-text-color
+	font-family $SemiBold
 	&-h1-size
-		font-size 36px
-		line-height 38px
+		font 60px $Med
+		line-height 73px
 	&-h2-size
-		font-size 32px
-		line-height 34px
+		font-size 40px
+		line-height 48px
+		&-sm
+			font-size 30px
+			line-height 40px
+			
 	&-h3-size
-		font-size 28px
-		line-height 32px
+		font-size 20px
+		line-height 27px
+		
+
+	a
+		color inherit
+		&:hover
+			color $accent-color
 		
 .text-center
 	text-align center
@@ -100,7 +111,9 @@
 	position relative
 	overflow hidden
 	width 100%
-	padding-top 50%
+	padding-top 70%
+	border-radius 5px
+	display block
 	img
 		display block
 		position absolute
@@ -108,6 +121,9 @@
 		width 100%
 		height 100%
 		object-fit cover
+		
+	&:hover
+		opacity .85
 	
 
 .content

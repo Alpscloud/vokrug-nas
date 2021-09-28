@@ -9,3 +9,110 @@
 +min-screen-height(minHeight)
 */
 
++max-screen(1200px)
+	.promo-block__row
+		flex-wrap wrap
+		
+		.title
+			max-width 100%
+			margin-bottom 30px
+			margin-right 0
+
++max-screen(1050px)
+	.main-article
+		.title
+			font-size 22px
+			line-height 26px
+			
+
+	.articles-slider
+		.swiper-wrapper
+			flex-wrap wrap
+			
+		.swiper-slide
+			width 50%
+			padding-bottom 20px
+			
+	.header
+		display none
+			
+
++max-screen(700px)
+	.container
+		padding-left 15px
+		padding-right 15px
+		
+	.sect__promo
+		padding-top 135px
+	.promo-block
+		.title
+			font-size 25px
+			line-height 30px
+			margin-bottom 30px
+			padding-bottom 30px
+			border-bottom 1px solid rgba($dark-text-color, .1)
+			i
+				color $accent-color
+				border-bottom 2px solid $accent-color
+				font-style italic
+			span
+				text-align right
+			
+	.promo-block__row
+		margin-bottom 80px
+		
+
+	.main-articles__row
+		flex-wrap wrap
+		
+	.main-article
+		padding-bottom 0
+		&__wrapper
+			width 100%
+			padding-bottom 0
+			margin-bottom 30px
+			&:last-child
+				margin-bottom 0
+				
+
+		.article-card__thumbnail
+			padding-top 100%
+			
+		.title
+			font-size 30px
+			line-height 40px
+		
+			
+	.main-articles
+		margin-bottom 80px
+		
+	.articles-slider
+		margin-right -20px
+		.swiper-wrapper
+			flex-wrap nowrap
+			
+		.swiper-slide
+			width 325px
+			padding-bottom 0
+			
+	.slider-notice
+		display block
+		
+	.promo-block
+		.share
+			width 100%
+			
+			&-socials
+				display flex
+				
+				li
+					flex 1
+					
+				&__link
+					width 100%
+		
+
++max-screen(374px)
+	.articles-slider
+		.swiper-slide
+			width 300px

@@ -1,0 +1,75 @@
+.sect__promo
+	padding-top 55px
+	
+	.title
+		max-width 770px
+		margin-right 30px
+		span
+			display block
+		
+.promo-block__row
+	margin-bottom 100px
+	
+
+.article-card__thumbnail
+	margin-bottom 20px
+
+.main-articles
+	margin-bottom 60px
+	
+.main-article
+	padding-bottom 40px
+	.article-card__thumbnail
+		padding-top 75%
+		
+	.title
+		margin-bottom 20px
+		margin-right 0
+		
+
+.article-categories
+	padding-bottom 20px
+	display inline-block
+	border-bottom 1px solid rgba($border-color, .5)
+	ul
+		li
+			display inline-block
+			margin-right 11px
+			padding-right 15px
+			position relative
+			&:after
+				pseudo()
+				position absolute
+				vertical-center()
+				right 0
+				width 3px
+				height 3px
+				border-radius 50%
+				background-color $dot-color
+				opacity .2
+			&:last-child
+				margin-right 0
+				&:after
+					display none
+					
+		a
+			text-transform uppercase
+			letter-spacing 0.05em
+			color $light-text-color
+			font 12px $SemiBold
+			&:hover
+				color $accent-color
+				
+				
+
+.article-card
+	&__preview
+		margin-bottom 20px
+		font-size 14px
+		line-height 21px
+		
+	.title
+		margin-bottom 12px
+		margin-right 0
+		
+	

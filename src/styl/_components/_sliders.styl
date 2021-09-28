@@ -18,6 +18,32 @@
 			visibility hidden
 			pointer-events none
 			
+	&-notice
+		position relative
+		padding-left 58px
+		opacity .3
+		font-size 14px
+		line-height 21px
+		color $dark-text-color
+		margin-top 40px
+		display none
+		&:before
+			pseudo()
+			position absolute
+			left 0
+			vertical-center()
+			width 40px
+			height 40px
+			background url('../img/icons/svg/hand.svg') 50% no-repeat / contain
+			
 .swiper-container
 	*
 		box-sizing border-box
+		
+
+.articles-slider
+	.swiper-wrapper
+		margin-left -10px
+		margin-right -10px
+		
+
