@@ -18,27 +18,46 @@ input[type="search"]::-webkit-search-results-decoration
 	&-input
 		display block
 		width 100%
-		padding 10px 15px
 		text-align left
-		background-color $light-color
-		border 2px solid transparent
-		font 1em $Reg
-		color $text-color
-		&:hover,
+		background-color $basic-white-color
+		font 13px $Reg
+		color $dark-text-color
+		padding 17px 170px 17px 50px
+		border-radius 5px
+		&:hover
+			&::-webkit-input-placeholder
+				color $dark-text-color
+			&::-moz-placeholder
+				color $dark-text-color
+			&:-moz-placeholder
+				color $dark-text-color
+			&:-ms-input-placeholder
+				color $dark-text-color
+				
 		&:focus
-			border-color $accent-color
+			~ .btn-submit 
+				span
+					&:after
+						opacity 1
+						transform translate(5px, -50%)
+		
+			
 		&::-webkit-input-placeholder
-			font 1em $Reg
-			color $text-color
+			font 13px $Reg
+			color rgba($dark-text-color, .5)
+			transition color .17s ease-in-out
 		&::-moz-placeholder
-			font 1em $Reg
-			color $text-color
+			font 13px $Reg
+			color rgba($dark-text-color, .5)
+			transition color .17s ease-in-out
 		&:-moz-placeholder
-			font 1em $Reg
-			color $text-color
+			font 13px $Reg
+			color rgba($dark-text-color, .5)
+			transition color .17s ease-in-out
 		&:-ms-input-placeholder
-			font 1em $Reg
-			color $text-color
+			font 13px $Reg
+			color rgba($dark-text-color, .5)
+			transition color .17s ease-in-out
 			
 		&.is-error
 			border-color red
@@ -48,6 +67,24 @@ input[type="search"]::-webkit-search-results-decoration
 		margin-bottom 10px
 		&:last-child
 			margin-bottom 0
+			
+		.btn
+			position absolute
+			z-index 1
+			right 7px
+			vertical-center()
+			
+		&__email
+			&:before
+				pseudo()
+				position absolute
+				pointer-events none
+				position absolute
+				left 20px
+				vertical-center()
+				width 13px
+				height 13px
+				background url('../img/icons/svg/email.svg') 50% no-repeat / contain
 			
 		&__label
 			display inline-block

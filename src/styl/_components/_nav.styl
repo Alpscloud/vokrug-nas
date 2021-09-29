@@ -1,7 +1,28 @@
 .nav
+	&__overlay
+		position fixed
+		top 0
+		left 0
+		width 100%
+		height 100%
+		background-color rgba($basic-black-color, .2)
+		display none
+	&-content
+		&__header
+			display none
+			align-items center
+			justify-content space-between
+			span
+				color $accent-color
+				display inline-block
+				font 25px $Reg
+				border-bottom 1px solid
 	&__col
 		flex 1
 		margin-left 70px
+		display flex
+		align-items center
+		justify-content space-between
 
 	li
 		display inline-block
@@ -12,7 +33,9 @@
 			> a
 				color $accent-color
 				span
-					border-color $accent-color
+					&:before
+						width 100%
+					
 					
 			.sub-menu
 				opacity 1
@@ -44,13 +67,26 @@
 			opacity .2
 		
 		span
-			border-bottom 1px solid transparent
-			transition border-color .17s ease-in-out
+			display inline-block
+			position relative
+			padding-bottom 2px
+			&:before
+				pseudo()
+				position absolute
+				left 0
+				width 0
+				background-color $accent-color
+				transition width .17s ease-in-out
+				height 1px
+				bottom 0
+			
 		
 		&:hover
 			color $accent-color
 			span
-				border-color $accent-color
+				&:before
+					width 100%
+			
 
 .sub-menu
 	position absolute

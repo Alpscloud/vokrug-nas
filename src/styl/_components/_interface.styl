@@ -63,3 +63,41 @@
 				svg, path
 					fill $basic-white-color !important
 					
+
+.permalink
+	position relative
+	padding-right 21px
+	font 16px $Med
+	color $dark-text-color
+	&:after
+		pseudo()
+		position absolute
+		right 0
+		vertical-center()
+		width 6px
+		height 11px
+		background url('../img/icons/svg/permalink-arrow.svg') 50% no-repeat / contain
+		transition opacity .17s ease-in-out
+		opacity 0
+	span
+		display inline-block
+		position relative
+		padding-bottom 2px
+		&:before
+			pseudo()
+			position absolute
+			left 0
+			width 0
+			background-color $accent-color
+			transition width .17s ease-in-out
+			height 1px
+			bottom 0
+			
+	&:hover
+		color $accent-color
+		&:after
+			opacity 1
+		span
+			&:before
+				width 100%
+					

@@ -18,6 +18,56 @@
 			visibility hidden
 			pointer-events none
 			
+	&-controls
+		margin-top 40px
+		display flex
+		align-items center
+		flex-wrap nowrap
+		
+	&-navigation
+		height 20px
+		display flex
+		flex-wrap nowrap
+		&__btn
+			display inline-block
+			width 20px
+			height 20px
+			position relative
+			svg
+				svg()
+				position absolute
+				position-center()
+				width 8px
+				height 14px
+				fill $dark-text-color
+			&:hover
+				svg
+					fill $accent-color
+				
+			&.is-disabled,
+			&:disabled
+				pointer-events none
+				opacity .2
+					
+			
+	&-scrollbar
+		height 2px
+		background-color rgba($dark-text-color, .1)
+		flex 1
+		margin-right 20px
+		
+		.swiper-scrollbar-drag
+			background-color $accent-color
+			height 100%
+			cursor move
+			cursor grab
+			cursor -moz-grab
+			cursor -webkit-grab
+			&:active 
+				cursor grabbing
+				cursor -moz-grabbing
+				cursor -webkit-grabbing
+
 	&-notice
 		position relative
 		padding-left 58px
@@ -45,5 +95,18 @@
 	.swiper-wrapper
 		margin-left -10px
 		margin-right -10px
+		
+
+.articles-cards__slider
+	min-width 0
+	
+	.swiper-slide
+		&:nth-child(3n+1)
+			.article-card__thumbnail
+				padding-top 142%
+		&:nth-child(3n+3)
+			.article-card__thumbnail
+				padding-top 88%
+	
 		
 
