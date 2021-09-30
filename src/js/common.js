@@ -112,9 +112,9 @@ $(document).ready(function() {
 			var self = $(this);
 
 			var articlesSlider = new Swiper(this, {
-				slidesPerView: 3,
+				slidesPerView: 'auto',
 				loop: false,
-				spaceBetween: 30,
+				spaceBetween: 0,
 				scrollbar: {
 					el: this.parentNode.querySelector('.js-articles-slider-scrollbar'),
 					draggable: true,
@@ -124,6 +124,24 @@ $(document).ready(function() {
 					disabledClass: 'is-disabled',
 					nextEl: this.parentNode.querySelector('.js-articles-slider-btn-next'),
 					prevEl: this.parentNode.querySelector('.js-articles-slider-btn-prev'),
+				},
+				breakpoints: {
+					1200: {
+						slidesPerView: 3,
+						spaceBetween: 30
+					},
+					1050: {
+						slidesPerView: 2,
+						spaceBetween: 30
+					},
+					767: {
+						slidesPerView: 3,
+						spaceBetween: 30
+					},
+					700: {
+						slidesPerView: 2,
+						spaceBetween: 30
+					}
 				}
 			});
 		});

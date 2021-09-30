@@ -82,6 +82,7 @@
 			margin-bottom 20px
 			border-bottom 1px solid rgba($dark-text-color, .1)
 			position relative
+			margin-right 0
 			
 			&:last-child
 				padding-bottom 0
@@ -150,6 +151,21 @@
 		flex 1 0 50%
 		&:last-child
 			margin-bottom 0
+			
+
+	.category
+		&__row
+			flex-wrap wrap
+			
+		&-text
+			flex none
+			width 100%
+			max-width 100%
+			padding-right 0
+			margin-bottom 45px
+			
+		&-articles
+			width 100%
 
 
 +max-screen(992px)
@@ -167,6 +183,25 @@
 +max-screen(767px)
 	.main-category__wrapper
 		flex 1 0 100%
+		
+	.footer
+		.row
+			flex-wrap wrap
+			
+		&-top,
+		&-bottom
+			padding 35px 0
+			
+		p
+			width 100%
+			margin-bottom 20px
+			
+	.share
+		width 100%
+			
+	.email
+		width 100%
+		margin-bottom 35px
 	
 
 +max-screen(700px)
@@ -230,7 +265,8 @@
 	.main-articles
 		margin-bottom 80px
 		
-	.articles-slider
+	.articles-slider,
+	.articles-cards__slider
 		margin-right -20px
 		.swiper-wrapper
 			flex-wrap nowrap
@@ -238,11 +274,25 @@
 		.swiper-slide
 			width 325px
 			padding-bottom 0
+			padding-left 10px
+			padding-right 10px
+			
+	.slider-controls
+		padding-right 20px
+		
+		.slider-navigation
+			display none
+			
+		.slider-scrollbar
+			margin-right 0
+			
+
 			
 	.slider-notice
 		display block
 		
-	.promo-block
+	.promo-block,
+	.footer
 		.share
 			width 100%
 			
@@ -269,6 +319,28 @@
 			font-size 35px
 			line-height 43px
 			margin-bottom 25px
+			
+
+	.sect__category
+		padding 45px 0
+		
+	.category-text
+		margin-bottom 45px
+		&__description
+			margin-bottom 35px
+		.title
+			font-size 35px
+			line-height 43px
+			
+	.articles-cards__slider
+		.swiper-slide
+			&:nth-child(3n+1)
+				.article-card__thumbnail
+					padding-top 117%
+			&:nth-child(3n+3)
+				.article-card__thumbnail
+					padding-top 88%
+	
 
 +max-screen(420px)
 	.promo-block

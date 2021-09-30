@@ -1,2 +1,33 @@
 .footer
 	background-color $footer-bg
+	color rgba($basic-white-color, .5)
+	font 16px $Reg
+	a
+		color inherit
+		&:hover
+			color $basic-white-color
+	&-top
+		padding 60px 0
+		border-bottom 2px solid rgba($basic-white-color, .1)
+		
+	&-bottom
+		padding 60px 0
+		
+	.share
+		&__title
+			display none
+		&__text
+			color $basic-white-color
+			opacity 1
+			
+		&-socials__link
+			border-color #3C3C3C
+		
+.email
+	p
+		margin-bottom 8px
+	a
+		color $basic-white-color
+		font 35px $SemiBold
+		&:hover
+			color $secondary-color
