@@ -147,4 +147,9 @@ $(document).ready(function() {
 		});
 	}
 
+	$('.article, .aside').theiaStickySidebar({
+		'additionalMarginTop': 20,
+		'disableOn': false
+	});
+
 });

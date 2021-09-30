@@ -130,43 +130,267 @@
 	
 
 .content
+	color rgba($dark-text-color, .8)
+	padding-right 2px
 	*
 		&:last-child
 			margin-bottom 0
+		&:first-child
+			margin-top 0
 			
 	h2,h3,h3,h4,h5,h6
-		line-height 1
-		font-family $Bold
+		color $dark-text-color
+		font-family $SemiBold
+		
+	h2
+		font-size 45px
+		line-height 54px
+		margin 30px 0
+		
+	h3
+		font-size 20px
+		line-height 27px
+		margin 30px 0
+		
+	h4, h5, h6
+		font-size 16px
+		line-height 24px
+		margin 25px 0
+		
+	p
+		margin 30px 0
+		
+	img
+		display block
+		width auto
+		max-width 100%
+		margin 30px 0
+		&.aligncenter
+			margin 30px 0
+		&.alignleft
+			float left
+			margin 0 30px 30px 0
+		&.alignright
+			float right
+			margin 0 0 30px 30px
+		
 		
 	strong, b
-		font-family $Bold
+		font-family $SemiBold
 		
-
+	hr
+		display block
+		margin 25px 0
+		border-width 1px
+		border-color rgba($dark-text-color, .1)
+	
+		
+	h2 + p,
+	h3 + p,
+	h4 + p
+		margin-top 30px
+		
+	p + ul,
+	p + ol
+		margin-top -5px
+		
+	p + hr
+		margin-top -5px
+		
+	hr + h2
+		margin-top 65px
+	hr + h3
+		margin-top 65px
+		
+	table
+		td
+			width 50%
+			padding 10px
+		tr
+			border-bottom 1px solid rgba($dark-text-color, .1)
+		
 	ul, ol
+		margin 25px 0
 		li
 			display block
 			position relative
 			margin-bottom 10px
+			i
+				display block
+				color #B2B2B2
+				font-size 14px
+				width 100%
 			
 			&:last-child
 				margin-bottom 0
 				
 	ul
 		li
+			padding-left 20px
+			margin-bottom 25px
+			&:last-child
+				margin-bottom 0
 			&:before
 				pseudo()
-				width 4px
-				height 4px
+				width 5px
+				height 5px
 				border-radius 50%
-				margin-right 4px
-				background-color $text-color
+				position absolute
+				left 0
+				top 10px
+				background-color $accent-color
 				
 	ol
 		counter-reset list
+		i
+			margin-left 30px
 		li
+			margin-bottom 25px
+			display flex
+			flex-wrap wrap
+			align-items flex-start
 			&:before
 				counter-increment list
-				content counter(list) ". "
-				display inline-block
-				margin-right 4px
+				content counter(list)
+				width 18px
+				height 18px
+				margin-right 12px
+				flex-col-center()
+				border-radius 50%
+				color $basic-white-color
+				background-color $accent-color
+				font 10px $SemiBold
+				margin-top 3.5px
+				
+	blockquote,
+	.su-heading-style-default
+		display block
+		position relative
+		padding 25px 0 25px 100px
+		border-top 1px solid rgba($dark-text-color, .1)
+		border-bottom 1px solid rgba($dark-text-color, .1)
+		font-size 20px
+		line-height 27px
+		font-style italic
+		color $accent-color
+		text-align left
+		margin 30px 0
+		&:before
+			pseudo()
+			position absolute
+			left 0
+			vertical-center()
+			width 65px
+			height 40px
+			background url('../img/icons/svg/quote.svg') left center no-repeat / contain
+			opacity .1
+			
+	.su-heading-style-default 
+		.su-heading-inner
+			padding 0
+			border none
+			
 
+	.note
+		text-align left
+		border-width 1px 1px 1px 12px
+		border-radius 5px
+		border-style solid
+		border-color $accent-color
+		padding 45px
+		margin 30px 0
+		
+	.notewarning
+		position relative
+		color $accent-color
+		font-size 24px
+		line-height 32px
+		font-style italic
+		padding-left 135px
+		&:before
+			content '!'
+			width 100px
+			height 100px
+			flex-col-center()
+			border-radius 50%
+			background-color $accent-color
+			color $basic-white-color
+			position absolute
+			left 0
+			top 0
+			font-style normal
+			font 85px $SemiBold
+			line-height 1
+				
+
+	.blok_my_1
+		color $basic-white-color
+		background-color $accent-color
+		padding 60px 70px
+		margin 30px 0
+		ul, ol
+			column-count 2
+			column-gap 15px
+			i
+				display block
+				color #D9D9D9
+		ul
+			li
+				&:before
+					background-color $basic-white-color
+		ol
+			li
+				display block
+				padding-left 30px
+				&:before
+					position absolute
+					left 0
+					top 4px
+					background-color $basic-white-color
+					color $accent-color
+					margin-top 0
+					margin-right 0
+					
+				i
+					margin-left 0
+					
+				
+					
+
+	.blok_my_2
+		font-size 35px
+		font-style italic
+		color $accent-color
+		font-weight 400
+		border-bottom 1px solid $accent-color
+		border-top 1px solid $accent-color
+		text-align center
+		display block
+		padding 30px 0
+		margin 30px 0
+		
+	input[type=checkbox]
+		display inline-block
+		vertical-align middle
+		width 15px
+		height 15px
+		box-shadow none
+		appearance none
+		-webkit-appearance none
+		margin -3px 10px 0 0
+		position relative
+		border-width 1.5px
+		border-style solid
+
+	input[name=vdz_checkbox]
+		border-color rgba($dark-text-color, .1)
+		&:checked
+			border-color $accent-color
+			background url('../img/icons/svg/checkbox-ic.svg') 50% no-repeat / 8.6px 6.25px
+			
+	input[name=vdz_checkbox_error]
+		border-color #FF4A4A
+		background url('../img/icons/svg/error-ic.svg') 50% no-repeat / 7px 7px
+			
+		
+	

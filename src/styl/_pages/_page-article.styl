@@ -1,0 +1,35 @@
+.article-img
+	padding-top 47%
+	width 1600px
+	
+.article
+	background-color $basic-white-color
+	padding 70px 0 0 65px
+	position relative
+	z-index 1
+	margin-top -85px
+	&:after
+		pseudo()
+		position absolute
+		height 100%
+		width 100%
+		left 100%
+		top 0
+		margin-left -1px
+		background-color $basic-white-color
+		z-index 1
+	&-wrapper
+		display flex
+		flex-wrap nowrap
+		align-items flex-start
+		
+	&-header
+		margin-bottom 95px
+		.title
+			margin-bottom 25px
+		
+
+.content
+	#toc_container
+		display none !important
+		

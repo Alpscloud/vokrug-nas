@@ -1,0 +1,68 @@
+.aside
+	background-color $basic-white-color
+	flex none
+	width 320px
+	padding-right 30px
+	padding-top 90px
+	
+	.share
+		padding-top 30px
+		margin-top 90px
+		border-top 1px solid rgba($dark-text-color, .1)
+		&__text
+			opacity 1
+			font-size 16px
+			line-height 24px
+	
+
+.article-contents
+
+	
+	&__title
+		font 25px $SemiBold
+		color $basic-black-color
+		margin-bottom 30px
+		
+.toc_widget_list
+	li
+		margin-bottom 14px
+		font 14px $Reg
+		line-height 20px
+		color $dark-text-color
+		a
+			color inherit
+			display inline-block
+			position relative
+			&:after
+				pseudo()
+				vertical-align middle
+				width 6px
+				height 11px
+				background url('../img/icons/svg/permalink-arrow.svg') 50% no-repeat / contain
+				transition opacity .17s ease-in-out
+				opacity 0
+				margin-left 12px
+			span
+				display inline-block
+				margin-right 4px
+				transition color .17s ease-in-out
+			&:hover
+				color $accent-color
+				
+				span
+					color $dark-text-color
+			&:active,
+			&.is-active
+				color $accent-color
+				
+				span
+					color $dark-text-color
+				&:after
+					opacity 1
+		&:last-child
+			margin-bottom 0
+		
+		ul
+			padding-left 20px
+			padding-top 14px
+			
