@@ -25,6 +25,13 @@
 
 	.nav__col
 		margin-left 25px
+		
+
+	.article-content
+		padding-left 25px
+		
+	.aside
+		width 260px
 			
 
 +max-screen(1100px)
@@ -127,6 +134,52 @@
 				margin-bottom 0
 				
 
+	.aside
+		display none
+		
+	.article-content
+		padding-left 0
+		margin-top 0
+		padding-right 0
+		&:after
+			display none
+		
+	.article-img
+		width calc(100% + 40px)
+		margin-left -20px
+		margin-right -20px
+		padding-top 96%
+		
+
+
+	.article-mobile-tools
+		display block
+		//height 300px
+		//outline 1px solid red
+			
+	.article-header
+		margin-bottom 40px
+		
+	.articles-cards__row
+		.article-card__wrapper
+			width 50%
+			&:nth-child(1),
+			&:nth-child(2)
+				.title
+					font-size 22px
+					line-height 26px
+					
+			&:nth-child(10n+3),
+			&:nth-child(10n+4)
+				width 100%
+			&:nth-child(10n+3)
+				margin-bottom 0
+				.article-card
+					padding-bottom 0
+					border-bottom none
+		
+				
+
 
 +max-screen(1050px)
 	.main-article
@@ -167,6 +220,16 @@
 		&-articles
 			width 100%
 
+
+	.pagination-wrapper
+		flex-wrap wrap
+		
+	.btn-load-more
+		flex none
+		width 100%
+		margin-left 0
+		margin-top 40px
+		height 50px
 
 +max-screen(992px)
 	.subscribe
@@ -292,7 +355,8 @@
 		display block
 		
 	.promo-block,
-	.footer
+	.footer,
+	.article-mobile-tools
 		.share
 			width 100%
 			
@@ -341,7 +405,216 @@
 				.article-card__thumbnail
 					padding-top 88%
 	
+	.breadcrumbs
+		white-space nowrap
+		overflow-x auto
+		padding-bottom 10px
+		margin-bottom 35px
+		
 
+	.content
+		font-size 16px
+		line-height 24px
+		
+		h2
+			font-size 25px
+			line-height 30px
+			margin-bottom 15px
+			margin-top 15px
+			
+		p
+			margin 15px 0
+			
+		img
+			width calc(100% + 40px)
+			margin-top 35px !important
+			margin-bottom 35px !important
+			margin-left -20px !important
+			margin-right -20px !important
+			max-width none
+			float none !important
+			
+		ol
+			li
+				display block
+				position relative
+				padding-left 30px
+				i
+					padding-left 0
+					margin-left 0
+				&:before
+					margin 0
+					left 0
+					top 4px
+					position absolute
+			
+		ul, ol
+			margin 15px 0
+			
+		p + h2
+			margin-top 60px
+			
+		h2 + p
+			margin-top 15px
+			
+		p + hr
+			margin-top 25px
+			
+		hr + h2
+			margin-top 60px
+			
+		.blok_my_1
+			margin 25px 0
+			padding 15px 15px
+			
+			
+			ol, ul
+				column-count 1
+				
+		.blok_my_2
+			margin 25px 0
+			padding 30px 0
+			font-size 24px
+			line-height 32px
+			
+		.su-heading-style-default,
+		blockquote,
+		pre
+			padding 90px 0 30px 0
+			text-align center
+			font-size 18px
+			line-height 27px
+			margin 25px 0
+			&:before
+				horisontal-center()
+				top 30px
+				width 62px
+				height 40px
+		
+		pre
+			padding-left 25px
+			padding-right 25px
+			
+		.note
+			margin 25px 0
+			padding 35px 20px 35px 32px
+			
+		.notewarning
+			padding-left 0
+			padding-top 85px
+			font-size 20px
+			line-height 27px
+			&:before
+				top 0
+				left 0
+				width 65px
+				height 65px
+				font-size 50px
+				
+		
+	.article
+		padding-top 35px
+		
+		&-header
+			.title
+				font-size 35px
+				line-height 42px
+				margin-bottom 15px
+				
+
+
+	.articles-cards__row
+		.article-card__wrapper
+			width 100%
+			margin-bottom 30px
+			&:nth-child(1),
+			&:nth-child(2)
+				width 100%
+				.title
+					font-size 30px
+					line-height 40px
+					
+			&:nth-child(10n+3),
+			&:nth-child(10n+4)
+				margin 30px 0 70px
+				
+				.article-card
+					flex-direction column
+					
+					&__thumbnail
+						flex none
+						width 100%
+						margin-bottom 20px
+						padding-top 70%
+					&__content
+						flex none
+						width 100%
+						padding-left 0
+				
+			&:nth-child(10n+3)
+				margin-bottom 0
+				
+				
+	.category-entering
+		margin-bottom 40px
+		.slider-navigation
+			display none
+		&__title
+			flex none
+			width 100%
+			
+		.title
+			font-size 35px
+			line-height 42px
+		
+	.category-articles
+		> .title
+			font-size 35px
+			line-height 42px
+			margin-bottom 30px
+			
+	.subcategories-slider
+		margin-top 40px
+		.swiper-slide
+			width 235px
+			padding-right 5px
+			
+	
+	.btn-load-more
+		height auto
+		padding 0
+		border none
+		color $accent-color
+		margin-top 30px
+		&:hover
+			background-color transparent
+			color $accent-color
+			svg
+				fill $accent-color
+		svg
+			fill $accent-color
+	
+	.pagination
+		width 100%
+		&-wrapper
+			margin-top 30px
+			
+		
+	.pagination-list
+		display flex
+		flex-wrap nowrap
+		&__item
+			flex 1
+		&__link
+			width 100%
+		&__link--arrow
+			width 100%
+			span
+				display none
+			svg
+				margin 0
+			
+		
 +max-screen(420px)
 	.promo-block
 		.title

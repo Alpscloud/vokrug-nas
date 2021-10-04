@@ -63,6 +63,14 @@ $(document).ready(function() {
 	});
 
 
+	$('.js-toggle-article-contents-btn').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('is-active');
+		$(this).parents('.article-mobile-tools').find('.toc_widget_list').stop().slideToggle(200);
+	});
+
+
 
 
 	var mobileArticlesSlider = undefined;
@@ -146,6 +154,22 @@ $(document).ready(function() {
 			});
 		});
 	}
+
+
+	var subcategoriesSlider = new Swiper('.js-subcategories-slider', {
+		slidesPerView: 'auto',
+		spaceBetween: 15,
+		scrollbar: {
+			el: document.querySelector('.js-subcategories-slider-scrollbar'),
+			draggable: true,
+			hide: false
+		},
+		navigation: {
+			disabledClass: 'is-disabled',
+			nextEl: document.querySelector('.js-subcategories-slider-btn-next'),
+			prevEl: document.querySelector('.js-subcategories-slider-btn-prev'),
+		},
+	});
 
 	$('.article, .aside').theiaStickySidebar({
 		'additionalMarginTop': 20,

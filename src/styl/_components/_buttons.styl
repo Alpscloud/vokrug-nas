@@ -34,6 +34,31 @@
 				&:after
 					opacity 1
 					transform translate(5px, -50%)
+					
+	&-load-more
+		display flex
+		align-items center
+		justify-content center
+		flex-wrap nowrap
+		border-radius 5px
+		border 1px solid rgba($dark-text-color, .1)
+		font 14px $Med
+		color $dark-text-color
+		margin-left 30px
+		flex 1
+		svg
+			svg()
+			width 16px
+			height 16px
+			flex none
+			margin-left 15px
+			fill $dark-text-color
+		&:hover
+			border-color $accent-color
+			background-color $accent-color
+			color $basic-white-color
+			svg
+				fill $basic-white-color
 		
 	&-close
 		display inline-block
