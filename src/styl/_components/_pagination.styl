@@ -1,8 +1,61 @@
 .pagination
-	&__list
-		text-align center
-	&__item
-		display inline-block
-		margin-right 10px
-		&:last-child
-			margin-right 0
+	&-wrapper
+		padding-top 60px
+		border-top 1px solid rgba($dark-text-color, .1)
+		margin-top 50px
+		display flex
+		flex-wrap nowrap
+		justify-content space-between
+		
+	&-list
+		display flex
+		flex-wrap nowrap
+		height 50px
+		font 14px $Reg
+		
+		width 100%
+		&__link
+			color rgba($dark-text-color, .8)
+			text-align center
+			flex-col-center()
+			width 50px
+			height 50px
+			border-top 1px solid rgba($dark-text-color, .1)
+			border-bottom 1px solid rgba($dark-text-color, .1)
+			&:hover
+				color $accent-color
+				background-color rgba($accent-color, .05)
+				
+			&--arrow
+				display flex
+				align-items center
+				justify-content center
+				flex-wrap nowrap
+				height 50px
+				width 120px
+				border 1px solid rgba($dark-text-color, .1)
+				color $dark-text-color
+				&:hover
+					background-color rgba($accent-color, .05)
+				&_prev
+					border-right none
+					border-radius 5px 0 0 5px
+					svg
+						margin-right 15px
+						
+				&_next
+					border-left none
+					border-radius 0 5px 5px 0
+					svg
+						margin-left 15px
+				svg
+					width 6px
+					height 17px
+					transition fill .17s ease-in-out
+					flex none
+					fill $dark-text-color
+				
+			&.is-active
+				background-color $accent-color
+				border-color $accent-color
+				color $basic-white-color

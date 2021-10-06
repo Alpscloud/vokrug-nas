@@ -279,7 +279,7 @@
 			pseudo()
 			position absolute
 			left 0
-			vertical-center()
+			top 25px
 			width 65px
 			height 40px
 			background url('../img/icons/svg/quote.svg') left center no-repeat / contain
@@ -289,6 +289,29 @@
 		.su-heading-inner
 			padding 0
 			border none
+			
+	pre
+		display block
+		margin 40px 0
+		padding 36px 60px 36px 166px
+		color $basic-white-color
+		font-size 20px
+		line-height 27px
+		font-style italic
+		background-color $accent-color
+		border-radius 5px
+		width 100%
+		white-space normal
+		position relative
+		&:before
+			pseudo()
+			position absolute
+			left 60px
+			top 36px
+			width 65px
+			height 40px
+			background url('../img/icons/svg/quote-light.svg') left center no-repeat / contain
+			opacity .5
 			
 
 	.note
@@ -328,6 +351,7 @@
 		background-color $accent-color
 		padding 60px 70px
 		margin 30px 0
+		border-radius 5px
 		ul, ol
 			column-count 2
 			column-gap 15px
@@ -381,16 +405,21 @@
 		position relative
 		border-width 1.5px
 		border-style solid
+		background-repeat no-repeat
+		background-position 50% 50%
 
 	input[name=vdz_checkbox]
 		border-color rgba($dark-text-color, .1)
+		background-size 8.6px 6.25px
 		&:checked
 			border-color $accent-color
-			background url('../img/icons/svg/checkbox-ic.svg') 50% no-repeat / 8.6px 6.25px
+			background-image url('../img/icons/svg/checkbox-ic.svg')
+			
 			
 	input[name=vdz_checkbox_error]
 		border-color #FF4A4A
-		background url('../img/icons/svg/error-ic.svg') 50% no-repeat / 7px 7px
+		background-image url('../img/icons/svg/error-ic.svg')
+		background-size 7px 7px
 			
 		
 	

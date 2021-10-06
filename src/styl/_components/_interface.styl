@@ -100,4 +100,22 @@
 		span
 			&:before
 				width 100%
+				
+.back-link
+	position relative
+	width 39px
+	height 39px
+	flex none
+	margin-left -12px
+	margin-right 12px
+	svg
+		svg()
+		width 15px
+		height 27px
+		position absolute
+		position-center()
+		fill $dark-text-color
+	&:hover
+		svg
+			fill $accent-color
 					
