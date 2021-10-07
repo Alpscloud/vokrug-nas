@@ -59,12 +59,15 @@ input[type="search"]::-webkit-search-results-decoration
 			color rgba($dark-text-color, .5)
 			transition color .17s ease-in-out
 			
-		&.is-error
-			border-color red
+		
 			
 	&-group
 		position relative
 		margin-bottom 10px
+		&.is-error
+			.error-tooltip
+				opacity 1
+				visibility visible
 		&:last-child
 			margin-bottom 0
 			
@@ -92,10 +95,90 @@ input[type="search"]::-webkit-search-results-decoration
 			
 	&-textarea
 		min-height 200px
+		
+textarea.default-input
+	min-height 210px
+		
+
+.default-input
+	display block
+	border-radius 5px
+	border 1px solid rgba($basic-black-color, .2)
+	padding 20px
+	color $dark-text-color
+	font 14px $Ibm
+	width 100%
+	&::-webkit-input-placeholder
+		font 14px $Ibm
+		color rgba($dark-text-color, .4)
+		transition color .17s ease-in-out
+	&::-moz-placeholder
+		font 14px $Ibm
+		color rgba($dark-text-color, .4)
+		transition color .17s ease-in-out
+	&:-moz-placeholder
+		font 14px $Ibm
+		color rgba($dark-text-color, .4)
+		transition color .17s ease-in-out
+	&:-ms-input-placeholder
+		font 14px $Ibm
+		color rgba($dark-text-color, .4)
+		transition color .17s ease-in-out
+	&:hover
+		border-color $accent-color
+		&::-webkit-input-placeholder
+			color $dark-text-color
+		&::-moz-placeholder
+			color $dark-text-color
+		&:-moz-placeholder
+			color $dark-text-color
+		&:-ms-input-placeholder
+			color $dark-text-color
+		&:-ms-input-placeholder
+			color $dark-text-color
+		
+	
+.form-groups__row
+	.form-group
+		margin-bottom 20px
 	
 
-
-
+.error-tooltip
+	position absolute
+	horisontal-center()
+	z-index 1
+	border-radius 5px
+	background-color $basic-white-color
+	bottom 100%
+	margin-bottom 10px
+	color $basic-black-color
+	padding 5px 10px 5px 40px
+	font-size 12px
+	white-space nowrap
+	box-shadow 0px 10px 50px rgba(0, 0, 0, 0.08)
+	transition all .17s ease-in-out
+	pointer-events none
+	opacity 0
+	visibility hidden
+	&:after
+		pseudo()
+		position absolute
+		horisontal-center()
+		margin-top -1px
+		top 100%
+		width 0
+		height 0
+		border-style solid
+		border-width 8px 6px 0 6px
+		border-color $basic-white-color transparent transparent transparent
+	&:before
+		pseudo()
+		position absolute
+		vertical-center()
+		left 10px
+		width 17px
+		height 17px
+		background url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMC8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMtU1ZHLTIwMDEwOTA0L0RURC9zdmcxMC5kdGQnPjxzdmcgaGVpZ2h0PSIzMiIgc3R5bGU9Im92ZXJmbG93OnZpc2libGU7ZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMiAzMiIgdmlld0JveD0iMCAwIDMyIDMyIiB3aWR0aD0iMzIiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxnIGlkPSJFcnJvcl8xXyI+PGcgaWQ9IkVycm9yIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiBpZD0iQkciIHI9IjE2IiBzdHlsZT0iZmlsbDojRDcyODI4OyIvPjxwYXRoIGQ9Ik0xNC41LDI1aDN2LTNoLTNWMjV6IE0xNC41LDZ2MTNoM1Y2SDE0LjV6IiBpZD0iRXhjbGFtYXRvcnlfeDVGX1NpZ24iIHN0eWxlPSJmaWxsOiNFNkU2RTY7Ii8+PC9nPjwvZz48L2c+PC9zdmc+') 50% no-repeat / contain
 .form
 	&-checkbox
 		display inline-block

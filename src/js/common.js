@@ -176,4 +176,76 @@ $(document).ready(function() {
 		'disableOn': false
 	});
 
+	$('.js-close-popup-btn').on('click',function(e) {
+	e.preventDefault();
+	$(this).parents('.js-popup').fadeOut(300);
+	$('html').removeClass('is-fixed');
+});
+
+$('.popup__overflow').on('click', function(e) {
+	e.stopPropagation();
+
+	var content = $(this).find('.popup__body');
+
+	if(!content.is(e.target) && content.has(e.target).length === 0) {
+		$('html').removeClass('is-fixed');
+		$('.js-popup').fadeOut(300);
+	}
+
+});
+
+
+	// ========= Ajax form ===========
+$('.js-required-input').on('focus',function() {
+	if($(this).parents('.form-group').hasClass('is-error')) {
+		$(this).parents('.form-group').removeClass('is-error');
+	}
+});
+
+$('.comments-form textarea').on('keyup', function() {
+	var value = $(this).val();
+
+	if(value.length > 5) {
+		$('.comments-form').find('.btn-send').prop('disabled', '');
+		$('.comments-form').find('.btn-send').removeClass('is-disabled');
+	} else {
+		$('.comments-form').find('.btn-send').prop('disabled', true);
+		$('.comments-form').find('.btn-send').addClass('is-disabled');
+	}
+});
+
+$('.subscribe form').submit(function(e) {
+	e.preventDefault();
+
+	var that = $(this);
+		inputs = that.find('.js-required-input'),
+		flag = true;
+
+	// Validate
+	$(inputs).each(function() {
+		if(!$(this).val() || $(this).val() == "") {
+			$(this).parents('.form-group').addClass('is-error');
+			flag = false;
+		}
+	});
+
+	if(!flag) {return false;}
+
+	$.ajax({
+		type: "POST",
+		url: "/wp-content/themes/krugozor-theme/mail.php", //Change
+		data: that.serialize()
+	}).done(function() {
+		$('.js-popup').fadeIn(300);
+		$('html').addClass('is-fixed');
+		setTimeout(function() {
+			$('.js-popup').fadeOut(300);
+			$('html').removeClass('is-fixed');
+			that.trigger("reset");
+		}, 2000);
+	});
+
+});
+// ========= =========== =========== ===========
+
 });

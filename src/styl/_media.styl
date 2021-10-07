@@ -497,19 +497,17 @@
 			
 		.note
 			margin 25px 0
-			padding 35px 20px 35px 32px
-			
-		.notewarning
-			padding-left 0
-			padding-top 85px
+			padding 120px 20px 20px 20px
 			font-size 20px
 			line-height 27px
 			&:before
-				top 0
-				left 0
+				top 35px
+				left 20px
 				width 65px
 				height 65px
 				font-size 50px
+			
+
 				
 		
 	.article
@@ -519,7 +517,9 @@
 			.title
 				font-size 35px
 				line-height 42px
-				margin-bottom 15px
+				
+			&__preview
+				margin-top 15px
 				
 
 
@@ -613,7 +613,14 @@
 				display none
 			svg
 				margin 0
+	
+
+	.form-groups__row
+		.form-group
+			width 100%
 			
+	.default-input
+		padding 15px
 		
 +max-screen(420px)
 	.promo-block

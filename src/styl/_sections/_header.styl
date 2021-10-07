@@ -26,49 +26,124 @@
 	width 100%
 	max-width 270px
 	height 40px
-	outline 1px solid red
 	
-	// div.asl_w
-	// 	box-shadow none
-	// 	text-shadow none
-	
-	// #ajaxsearchlite1 .probox, 
-	// div.asl_w .probox
-	// 	width 100%
-	// 	border 1px solid $search-border-color
-	// 	border-radius 5px
-		
-	// #ajaxsearchlite1
-	// 	.probox
-	// 		.proinput
-	// 			input.orig
-	// 				display block
-	// 				width 100%
-	// 				text-shadow none
-	// 				font 13px $Reg
-	// 				color $dark-text-color
-	// 				&::-webkit-input-placeholder
-	// 					font 13px $Reg
-	// 					color rgba($dark-text-color, .5)
-	// 				&::-moz-placeholder
-	// 					font 13px $Reg
-	// 					color rgba($dark-text-color, .5)
-	// 				&:-moz-placeholder
-	// 					font 13px $Reg
-	// 					color rgba($dark-text-color, .5)
-	// 				&:-ms-input-placeholder
-	// 					font 13px $Reg
-	// 					color rgba($dark-text-color, .5)
-					
-	// 	.probox 
-	// 		.promagnifier
-	// 			background-image none
-	// 			box-shadow none
+	div
+		&.asl_w
+			border none
+			box-shadow none
+			background-color $basic-white-color
+			height 40px
+			border 1px solid $search-border-color
+			border-radius 5px
+			display flex
+			align-items center
+			justify-content space-between
+			*
+				font-family $Reg !important
 				
-	// 			.innericon 
-	// 				svg
-	// 					width 14px
-	// 					height 14px
-	// 					svg()
-	// 					fill $dark-text-color
-	// 					opacity .5
+		&.asl_m
+			.probox 
+				width 100%
+				padding-right 14px
+				.promagnifier
+					background none
+					border none
+					box-shadow none
+					.innericon 
+						svg
+							fill rgba($dark-text-color, .5)
+							transition fill .17s ease-in-out
+					&:hover
+						.innericon 
+							svg
+								fill rgba($dark-text-color, 1)
+								
+				.proinput
+					margin 0
+					padding 0
+					float none
+					
+					input.autocomplete
+						display none !important
+					input[type=submit]
+						display none !important
+						
+					input.orig
+						font 13px $Reg !important
+						color $dark-text-color !important
+						padding-left 20px !important
+						box-sizing border-box
+						text-shadow none
+						
+						&::-webkit-input-placeholder
+							font 13px $Reg !important
+							
+							color rgba($dark-text-color, .5)
+						&::-moz-placeholder
+							font 13px $Reg !important
+							
+							color rgba($dark-text-color, .5)
+						&:-moz-placeholder
+							font 13px $Reg !important
+							
+							color rgba($dark-text-color, .5)
+						&:-ms-input-placeholder
+							font 13px $Reg !important
+							
+							color rgba($dark-text-color, .5)
+
+body
+	.asl_w
+		*
+			font-family $Reg !important
+	div.asl_r
+		&.vertical
+			background-color $basic-white-color
+			border-radius 5px
+			box-shadow 0px 10px 50px rgba(0, 0, 0, 0.08)
+			border none
+			padding 15px
+			padding-right 0
+			
+		.resdrg
+			padding-right 15px
+			
+		.results 
+			.item
+				border none
+				padding 0
+				border-radius 0 !important
+				margin-bottom 15px
+				&.hovered
+					background none !important
+				&:after
+					display none
+				&:last-child
+					margin-bottom 0
+					
+				.asl_content 
+					padding 0
+					h3 
+						a
+							font 13px $Reg
+							color $dark-text-color
+							&:hover
+								font-size 13px
+								color $accent-color
+								
+							span.overlap
+								display none
+								
+					.asl_desc,
+					.etc
+						display none
+			
+			.asl_content
+				padding 0
+				
+	div.asl_r.asl_w.vertical 
+		.results 
+			.item::after
+				display none
+	
+	

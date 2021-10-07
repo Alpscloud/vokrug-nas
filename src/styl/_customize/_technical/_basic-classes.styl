@@ -211,6 +211,7 @@
 		
 	ul, ol
 		margin 25px 0
+		clear both
 		li
 			display block
 			position relative
@@ -242,25 +243,26 @@
 				
 	ol
 		counter-reset list
-		i
-			margin-left 30px
+	
 		li
 			margin-bottom 25px
-			display flex
-			flex-wrap wrap
-			align-items flex-start
+			position relative
+			padding-left 30px
+
 			&:before
 				counter-increment list
 				content counter(list)
 				width 18px
 				height 18px
-				margin-right 12px
+				position absolute
+				left 0
+				top 4px
 				flex-col-center()
 				border-radius 50%
 				color $basic-white-color
 				background-color $accent-color
 				font 10px $SemiBold
-				margin-top 3.5px
+				
 				
 	blockquote,
 	.su-heading-style-default
@@ -320,16 +322,13 @@
 		border-radius 5px
 		border-style solid
 		border-color $accent-color
-		padding 45px
+		padding 45px 45px 45px 180px
 		margin 30px 0
-		
-	.notewarning
-		position relative
 		color $accent-color
 		font-size 24px
 		line-height 32px
 		font-style italic
-		padding-left 135px
+		position relative
 		&:before
 			content '!'
 			width 100px
@@ -339,12 +338,13 @@
 			background-color $accent-color
 			color $basic-white-color
 			position absolute
-			left 0
-			top 0
+			left 35px
+			top 45px
 			font-style normal
 			font 85px $SemiBold
 			line-height 1
 				
+	
 
 	.blok_my_1
 		color $basic-white-color

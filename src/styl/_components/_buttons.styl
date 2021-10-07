@@ -11,6 +11,28 @@
 	transition all .17s ease-in-out
 	backface-visibility hidden
 	
+	&-default
+		&:hover
+			background-color $accent-color
+			color $basic-white-color
+			
+	&-send
+		color $basic-white-color
+		display inline-block
+		text-align center
+		font 13px $Med
+		background-color $dark-text-color
+		border-radius 5px
+		padding 17px 35px
+		&:hover
+			background-color $accent-color
+		
+		&:disabled,
+		&.is-disabled
+			pointer-events none
+			color $light-text-color
+			background-color #F2F2F2
+	
 	&-submit
 		span
 			display inline-block
