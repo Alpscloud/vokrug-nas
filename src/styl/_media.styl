@@ -8,7 +8,10 @@
 +max-screen-height(maxHeight)
 +min-screen-height(minHeight)
 */
-
++max-screen(1365px)
+	.search-wrapper div.asl_w
+		max-width 170px
+		
 +max-screen(1200px)
 	.promo-block__row
 		flex-wrap wrap
@@ -34,7 +37,7 @@
 		width 260px
 			
 
-+max-screen(1100px)
++max-screen(1170px)
 	.header
 		padding 30px 0
 		margin-bottom 0
@@ -59,11 +62,21 @@
 			opacity 1
 			visibility visible
 			pointer-events auto
+
 			
 	.search-wrapper
 		width 100%
 		max-width 100%
 		outline none
+		
+		div.asl_w
+			max-width 100%
+			position relative
+			right auto
+			top auto
+			transform none
+			&.is-active
+				max-width 100%
 		
 	.nav
 		&__col

@@ -71,6 +71,15 @@ $(document).ready(function() {
 	});
 
 
+	$('.asl_w input.orig').on('focus', function() {
+		$(this).parents('.asl_w').addClass('is-active');
+	});
+
+	$('.asl_w input.orig').on('blur', function() {
+		$(this).parents('.asl_w').removeClass('is-active');
+	});
+
+
 
 
 	var mobileArticlesSlider = undefined;

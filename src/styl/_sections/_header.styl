@@ -29,6 +29,13 @@
 	
 	div
 		&.asl_w
+			position absolute
+			vertical-center()
+			z-index 2
+			right 0
+			transition all .17s ease-in-out
+			width 100%
+			max-width 270px
 			border none
 			box-shadow none
 			background-color $basic-white-color
@@ -40,6 +47,9 @@
 			justify-content space-between
 			*
 				font-family $Reg !important
+				
+			&.is-active
+				max-width calc(100% - 220px)
 				
 		&.asl_m
 			.probox 
