@@ -110,7 +110,12 @@
 		clip-rule evenodd
 		fill none !important
 		stroke $dark-text-color !important
-		stroke-width 2px !important
+		stroke-width 3px !important
+		path
+			transition fill .17s ease-in-out
+			fill inherit !important
+			stroke inherit !important
+			stroke-width inherit !important
 		
 	&:hover,
 	&.is-active
@@ -118,4 +123,6 @@
 			color $accent-color
 			border-color $accent-color
 		svg
+			stroke $accent-color !important
+		path
 			stroke $accent-color !important
