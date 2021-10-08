@@ -112,3 +112,38 @@
 	&-form
 		margin-top 25px
 		padding-right 1px
+		
+.comment-item
+	margin-bottom 30px
+	display flex
+	flex-wrap nowrap
+	align-items flex-start
+	&__avatar
+		flex none
+		width 55px
+		height 55px
+		border-radius 50%
+		position relative
+		overflow hidden
+		margin-right 20px
+		img
+			display block
+			width 100%
+			height 100%
+			object-fit cover
+			position absolute
+			position-center()
+	&__author
+		font 16px $Med
+		color $dark-text-color
+		margin-bottom 10px
+	&__text
+		font 14px $Ibm
+		line-height 21px
+	&__date
+		font 14px $Reg
+		color $dark-text-color
+		opacity .5
+		margin-top 15px
+	&:last-child
+		margin-bottom 0
