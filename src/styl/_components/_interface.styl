@@ -30,8 +30,8 @@
 			
 			svg
 				svg()
-				width 15px
-				height 15px
+				width 15px !important
+				height 15px !important
 				position absolute
 				position-center()
 				fill-rule evenodd
@@ -58,10 +58,24 @@
 					fill $tw-color
 				&:hover
 					background-color $tw-color
+					
+			
+					
+				
 				
 			&:hover
 				svg, path
 					fill $basic-white-color !important
+					
+			&--yandex
+				&:hover
+					background-color $yandex-color
+					svg
+						fill none !important
+					path:nth-child(1)
+						fill black !important
+					path:nth-child(2)
+						fill white !important
 					
 
 .permalink

@@ -264,8 +264,7 @@
 				font 10px $SemiBold
 				
 				
-	blockquote,
-	.su-heading-style-default
+	blockquote
 		display block
 		position relative
 		padding 25px 0 25px 100px
@@ -288,9 +287,18 @@
 			opacity .1
 			
 	.su-heading-style-default 
+		padding 2px 0
+		border-top 1px solid #AFAFAF
+		border-bottom 1px solid #AFAFAF
+		text-align center
+		 
 		.su-heading-inner
-			padding 0
+			padding 20px 0
 			border none
+			color $text-color
+			border-top 4px solid rgba($dark-text-color, .1)
+			border-bottom 4px solid rgba($dark-text-color, .1)
+			font-size 20px
 			
 	pre
 		display block
@@ -316,7 +324,8 @@
 			opacity .5
 			
 
-	.note
+	.note,
+	.notewarning
 		text-align left
 		border-width 1px 1px 1px 12px
 		border-radius 5px
@@ -343,6 +352,15 @@
 			font-style normal
 			font 85px $SemiBold
 			line-height 1
+			
+	.note
+		.notewarning
+			border none  !important
+			border-radius 0 !important
+			padding 0 !important
+			margin 0 !important
+			&:before
+				display none !important
 				
 	.notewarning
 		line-height 32px
